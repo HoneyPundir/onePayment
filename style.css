@@ -97,9 +97,9 @@ html {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 15px 30px;
 }
-.navbar ul {
+.navbar > ul {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
@@ -108,6 +108,7 @@ html {
 }
 .navbar ul li{
   margin: 0 15px;
+  position: relative;
 }
 .navbar ul li a{
   text-decoration: none;
@@ -117,6 +118,36 @@ html {
   color: #ccc6c6;
 }
 
+.navbar ul li .dropdown-menu{
+  background: #fff;
+  top: 40px;
+  position: absolute;
+  padding: 10px 10px;
+  width: max-content;
+  font-size: 15px;
+  font-weight: 500;
+  color: #474444;
+}
+.navbar ul li div{
+  display: none;
+}
+.navbar ul li .space{
+  background: transparent;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 17px;;
+}
+.navbar ul li:hover div{
+  display: block;
+}
+.navbar ul li div ul{
+  list-style: none;
+}
+.navbar ul li div ul li{
+  cursor: pointer;
+  margin: 10px;
+}
 
 /* -----------------------Main content------------------------ */
 
